@@ -8,7 +8,8 @@ em,
 i {
 	font-style: normal;
 }
-html,body{
+html,
+body {
 	min-width: 1200px;
 	width: 100%;
 	font-family: 'Microsoft Yahei';
@@ -177,8 +178,8 @@ nav {
 				perspective: 800px;
 				height: 0px;
 				li {
-                    width:78%;
-                    margin-left: 5%;
+					width: 78%;
+					margin-left: 5%;
 					height: 40px;
 					line-height: 40px;
 					transform: rotateY(95deg);
@@ -508,8 +509,13 @@ nav {
 				width: 1000px;
 				margin: 0 auto;
 				overflow: hidden;
+				height: 300px;
+				position: relative;
 				ul {
 					width: 3000px;
+					position: absolute;
+					top: 0;
+					left: 0;
 					&::after {
 						@clear();
 					}
@@ -565,10 +571,10 @@ nav {
 						height: 18px;
 						line-height: 18px;
 						display: inline-block;
-                        text-align: center;
-                        &:hover{
-                            background-color: rgb(69, 173, 0);
-                        }
+						text-align: center;
+						&:hover {
+							background-color: rgb(69, 173, 0);
+						}
 					}
 				}
 			}
@@ -576,26 +582,26 @@ nav {
 				width: 100%;
 				margin: 10px auto;
 				li {
-                    width: 96%;
-                    padding: 12px 0;
-                    margin: 0 auto;
-                    border-bottom: 1px solid @color-b;
-                    &:last-child{
-                        border-bottom:none;
-                    }
+					width: 96%;
+					padding: 12px 0;
+					margin: 0 auto;
+					border-bottom: 1px solid @color-b;
+					&:last-child {
+						border-bottom: none;
+					}
 					a {
 						display: block;
 						color: @333;
 						font-size: 16px;
 						width: 92%;
-                        margin: 0 auto;
-                        line-height: 36px;
+						margin: 0 auto;
+						line-height: 36px;
 						&:hover {
 							color: @color-b;
 						}
 						span {
-                            display: inline-block;
-                            vertical-align: middle;
+							display: inline-block;
+							vertical-align: middle;
 							&:nth-child(1) {
 								width: 70%;
 								@tov();
@@ -611,70 +617,670 @@ nav {
 		}
 	}
 }
-footer{
-    @w100();
-    background-color: #dcdcdc;
-    position: relative;
-    .foot{
-        @w1200();
-        margin: 50px auto 20px;
-        .foot_logo{
-            width: 400px;
-            float: left;
-            span{
-                width: 240px;
-                height: 170px;
-                display: block;
-                margin: 0 auto;
-                img{
-                    @img();
-                }
-            }
-        }
-        .foot_xx{
-            float: left;
-            width: 400px;
-            p{
-                width: 86%;
-                margin: 0 auto;
-                margin-bottom: 10px;
-                color: @333;
-                font-size: 16px;
-
-            }
-        }
-        .wechat{
-            width: 400px;
-            float: left;
-            span{
-                display: block;
-                margin: 0 auto;
-                &:nth-child(1){
-                    width: 120px;
-                    height: 120px;
-                    img{
-                        @img();
-                    }
-                }
-                &:nth-child(2){
-                    width: 120px;
-                    margin-top: 10px;
-                    text-align: center;
-                    color: @333;
-                    font-size: 14px;                   
-
-                }
-            }
-        }
-       
-    }
-    .foot_fbg{
-        width: 130px;
-        height: 130px;
-        position: absolute;
-        bottom: 20px;
-        right: 70px;
-        background: url(../img/vegetables_bg.png) no-repeat;
-        background-size: 100% 100%;
-    }
+footer {
+	@w100();
+	background-color: #dcdcdc;
+	position: relative;
+	.foot {
+		@w1200();
+		margin: 50px auto 20px;
+		.foot_logo {
+			width: 400px;
+			float: left;
+			span {
+				width: 240px;
+				height: 170px;
+				display: block;
+				margin: 0 auto;
+				img {
+					@img();
+				}
+			}
+		}
+		.foot_xx {
+			float: left;
+			width: 400px;
+			p {
+				width: 86%;
+				margin: 0 auto;
+				margin-bottom: 10px;
+				color: @333;
+				font-size: 16px;
+			}
+		}
+		.wechat {
+			width: 400px;
+			float: left;
+			span {
+				display: block;
+				margin: 0 auto;
+				&:nth-child(1) {
+					width: 120px;
+					height: 120px;
+					img {
+						@img();
+					}
+				}
+				&:nth-child(2) {
+					width: 120px;
+					margin-top: 10px;
+					text-align: center;
+					color: @333;
+					font-size: 14px;
+				}
+			}
+		}
+	}
+	.foot_fbg {
+		width: 130px;
+		height: 130px;
+		position: absolute;
+		bottom: 20px;
+		right: 70px;
+		background: url(../img/vegetables_bg.png) no-repeat;
+		background-size: 100% 100%;
+	}
 }
+// 文章下一页列表
+.next_pre {
+	width: 1200px;
+	text-align: center;
+	margin: 18px 0;
+	span {
+		display: inline-block;
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		line-height: 32px;
+		text-align: center;
+		color: #fff;
+		background-color: #15cf07;
+		font-size: 26px;
+		font-weight: bold;
+		cursor: pointer;
+		&:hover {
+			background-color: @color-b;
+		}
+	}
+	ul {
+		display: inline-block;
+		li {
+			display: inline-block;
+			width: 36px;
+			height: 36px;
+			font-size: 26px;
+			text-align: center;
+			line-height: 36px;
+			color: #fff;
+			background-color: rgb(211, 211, 211);
+			margin: 0 8px;
+			cursor: pointer;
+		}
+		.active {
+			background-color: #15cf07;
+		}
+	}
+}
+
+// 文章下一页列表
+// 服务业务开始///////////////////////
+.service_box {
+	@w1200();
+	.bottom_box {
+		@w1200();
+		.top_title {
+			width: 100%;
+			overflow: hidden;
+			li {
+				float: left;
+				width: 14%;
+				margin: 0 3%;
+				background-color: #dcdcdc;
+				color: @333;
+				font-size: 18px;
+				height: 38px;
+				line-height: 38px;
+				text-align: center;
+				a {
+					color: @333;
+					display: block;
+					width: 100%;
+					height: 100%;
+				}
+				&:hover {
+					background-color: @color-b;
+					a {
+						color: #fff;
+					}
+				}
+			}
+			.active_s {
+				background-color: @color-b;
+				a {
+					color: #fff;
+				}
+			}
+		}
+		.bottom_box_cantent {
+			width: 94%;
+			margin: 20px auto;
+			p {
+				color: @333;
+				font-size: 16px;
+				line-height: 29px;
+				text-indent: 2em;
+				width: 100%;
+			}
+		}
+	}
+}
+.CaseShow {
+	@w1200();
+	.bottom_box {
+		@w1200();
+		.body_img {
+			@w1200();
+			margin-top: 0px;
+			li {
+				float: left;
+				width: 31%;
+				height: 260px;
+				margin: 16px 1%;
+
+				img {
+					@img();
+				}
+			}
+		}
+	}
+}
+
+// 服务业务结束///////////////////////
+
+// 走进渝全 开始////////
+.CompanypProfile {
+	@w1200();
+	.body_content {
+		@w1200();
+		.img {
+			width: 36%;
+			height: 320px;
+			float: left;
+			img {
+				@img();
+			}
+		}
+		.right_title {
+			width: 62%;
+			margin-left: 1.3%;
+			float: left;
+			p {
+				width: 96%;
+				margin: 0 auto;
+				font-size: 18px;
+				color: @333;
+				line-height: 30px;
+				text-indent: 2em;
+			}
+		}
+	}
+}
+
+.EnterpriseCulture {
+	@w1200();
+	.body_content {
+		@w1200();
+		.img {
+			width: 36%;
+			height: 320px;
+			float: left;
+			img {
+				@img();
+			}
+		}
+		.right_title {
+			width: 62%;
+			float: left;
+			p {
+				width: 96%;
+				margin: 0 auto;
+				font-size: 18px;
+				color: @333;
+				line-height: 30px;
+				&:nth-child(odd) {
+					color: @color-b;
+					font-weight: bold;
+					margin-top: 6px;
+				}
+			}
+		}
+	}
+}
+
+.CompanyStructure {
+	@w100();
+	background-color: @color-b;
+	.content_body {
+		@w1200();
+		margin-bottom: 50px;
+		.body_bottom {
+			@w1200();
+			ul {
+				width: 100%;
+				text-align: center;
+				margin: 28px 0;
+				li {
+					width: 16%;
+					background-color: #fff;
+					height: 40px;
+					line-height: 40px;
+					text-align: center;
+					display: inline-block;
+					margin: 10px 20px;
+					color: @333;
+					font-size: 18px;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+.EnterpriseHonor {
+	@w1200();
+	.body_content {
+		@w1200();
+		margin-bottom: 50px;
+		li {
+			float: left;
+			width: 22%;
+			margin: 10px 1.5%;
+			img {
+				@img();
+			}
+		}
+	}
+}
+
+// 走进渝全 结束////////
+
+// 产品与基地   开始
+.ProductsBases {
+	@w1200();
+	.bases_body {
+		@w1200();
+		.top {
+			@w1200();
+			ul {
+				text-align: center;
+				display: inline-block;
+				width: 100%;
+				li {
+					width: 18%;
+					background-color: #dcdcdc;
+					font-size: @f_20;
+					display: inline-block;
+					text-align: center;
+					height: 40px;
+					line-height: 40px;
+					margin: 0 40px;
+					cursor: pointer;
+					a {
+						color: #000;
+					}
+					&:hover {
+						background-color: @color-b;
+						a {
+							color: #fff;
+						}
+					}
+				}
+				.active_pro {
+					background-color: @color-b;
+					a {
+						color: #fff;
+					}
+				}
+			}
+		}
+		.bottom_body {
+			@w1200();
+			.products_list {
+				width: 100%;
+				li {
+					width: 97%;
+					margin: 26px auto;
+					a {
+						display: block;
+						overflow: hidden;
+						.product_img {
+							float: left;
+							width: 24%;
+							height: 180px;
+							overflow: hidden;
+
+							img {
+								@img();
+								transition: all 0.5s linear;
+								&:hover {
+									transform: scale(1.1);
+									transition: all 0.5s linear;
+								}
+							}
+						}
+						.product_title {
+							float: left;
+							width: 74%;
+							margin-left: 2%;
+							border-bottom: dashed #999 1px;
+							span {
+								display: block;
+								line-height: 36px;
+								&:nth-child(1) {
+									color: @333;
+									font-size: 23px;
+									font-weight: bold;
+									margin-top: 30px;
+									@tov();
+									height: 30px;
+									line-height: 30px;
+									&:hover {
+										color: @color-b;
+									}
+								}
+								&:nth-child(2) {
+									color: @333;
+									font-size: 18px;
+									height: 70px;
+									overflow: hidden;
+									margin-top: 20px;
+									margin-bottom: 30px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 产品与基地   结束
+
+// 专家团队   开始
+.TeamIntroduce {
+	@w1200();
+	.body_team {
+		@w1200();
+		p {
+			text-indent: 2em;
+			color: @333;
+			font-size: 18px;
+			line-height: 34px;
+			width: 96%;
+			margin: 0 auto;
+		}
+	}
+}
+.TeamAlbum {
+	@w1200();
+	.team_list {
+		@w1200();
+		.list_t {
+			width: 100%;
+			overflow: hidden;
+			li {
+				width: 46%;
+				border: 2px solid @color-b;
+				float: left;
+				margin: 10px 2%;
+				box-sizing: border-box;
+				height: 300px;
+				overflow: hidden;
+				.left_img {
+					width: 36%;
+					height: 300px;
+					float: left;
+					img {
+						@img();
+					}
+				}
+				.right_title {
+					width: 62%;
+					margin-left: 2%;
+					float: left;
+					p {
+						color: @333;
+						font-size: 16px;
+						margin-top: 12px;
+						&:nth-child(1) {
+							font-size: 24px;
+							font-weight: bold;
+							font-family: '宋体';
+						}
+						&:nth-child(2) {
+							font-weight: bold;
+						}
+						&:nth-child(4) {
+							font-size: 14px;
+							max-height: 170px;
+							overflow: hidden;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+// 专家团队   结束
+// 新闻动态  开始
+.product_title_news {
+	float: left;
+	width: 74%;
+	margin-left: 2%;
+	border-bottom: dashed #999 1px;
+	p {
+		width: 80%;
+		overflow: hidden;
+		float: left;
+		span {
+			display: block;
+			line-height: 36px;
+			&:nth-child(1) {
+				color: @333;
+				font-size: 23px;
+				font-weight: bold;
+				margin-top: 30px;
+				@tov();
+				height: 30px;
+				line-height: 30px;
+				&:hover {
+					color: @color-b;
+				}
+			}
+			&:nth-child(2) {
+				color: @333;
+				font-size: 18px;
+				height: 70px;
+				overflow: hidden;
+				margin-top: 20px;
+				margin-bottom: 30px;
+			}
+		}
+	}
+	.news_time {
+		width: 16%;
+		float: left;
+		margin-left: 4%;
+		height: 180px;
+		line-height: 180px;
+		span {
+			color: @333;
+			font-size: 18px;
+			font-weight: bold;
+		}
+	}
+}
+// 新闻动态  结束
+
+// 文章详情页 开始
+.active_box {
+	@w1200();
+	.top_tit {
+		@w1200();
+		p {
+			width: 100%;
+			overflow: hidden;
+			height: 30px;
+			line-height: 30px;
+			font-size: @f_20;
+			font-weight: bold;
+			color: @333;
+			text-align: center;
+		}
+		span {
+			width: 100%;
+			overflow: hidden;
+			height: 30px;
+			line-height: 30px;
+			font-size: 16px;
+			font-weight: bold;
+			color: rgb(194, 194, 194);
+			text-align: center;
+			display: block;
+		}
+	}
+	.active_active {
+		@w1200();
+		p {
+			line-height: 28px;
+			font-size: 16px;
+			text-indent: 2em;
+			color: @333;
+			margin-bottom: 16px;
+			img {
+				width: 68%;
+				display: block;
+				margin: 0 auto;
+			}
+		}
+	}
+	.pre_netxt {
+		@w1200();
+		li {
+			float: left;
+			width: 48%;
+			&:nth-child(1) {
+				margin-right: 4%;
+			}
+			a {
+				color: #000;
+				font-size: 16px;
+				@tov();
+				display: block;
+				&:hover {
+					color: @color-b;
+				}
+			}
+		}
+	}
+}
+
+.hr_active {
+	width: 100%;
+	min-width: 1200px;
+	border-top: dashed 1px #999;
+	margin: 22px auto;
+}
+.RecommendArticle {
+	@w1200();
+	> p {
+		color: @333;
+		font-size: 18px;
+		font-weight: bold;
+		text-indent: 1em;
+	}
+	.body_active {
+		@w1200();
+		margin-top: 0;
+		li {
+			width: 22%;
+			margin: 10px 1.5%;
+			float: left;
+			span {
+				display: block;
+				cursor: pointer;
+				&:nth-child(1) {
+					width: 100%;
+					height: 220px;
+					overflow: hidden;
+
+					img {
+						@img();
+						transition: all 0.5s linear;
+						&:hover {
+							transform: scale(1.1);
+							transition: all 0.5s linear;
+						}
+					}
+				}
+				&:nth-child(2) {
+					margin-top: 6px;
+					color: @333;
+					font-size: 18px;
+					font-weight: bold;
+					@tov();
+					height: 22px;
+					line-height: 22px;
+					&:hover {
+						color: @color-b;
+					}
+				}
+			}
+		}
+	}
+}
+
+// 文章详情页 结束
+
+// 联系我们   开始
+.contact {
+	@w1200();
+	> p {
+		@w1200();
+		color: @333;
+		font-size: 18px;
+	}
+	.contact_add {
+		@w1200();
+		.left {
+			float: left;
+			width: 70%;
+			p {
+				margin-bottom: 16px;
+				font-size: 18px;
+				color: @333;
+			}
+		}
+		.right{
+			width: 20%;
+			margin-left: 5%;
+			float: left;
+			span{
+				width: 80%;
+				height: 180px;
+				display: block;
+				img{
+					@img();
+				}
+			}
+		}
+	}
+}
+.contact_map{
+	@w1200();
+	.map_body{
+		@w1200();
+		height: 480px;
+	}
+}
+// 联系我们   结束
