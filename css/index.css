@@ -948,6 +948,24 @@ footer .foot_fbg {
   margin: 30px auto 0;
   overflow: hidden;
 }
+.ProductsBases .search_tit-box {
+  width: 1200px;
+  margin: 30px auto 0;
+  overflow: hidden;
+}
+.ProductsBases .search_tit-box span {
+  width: 100%;
+  text-align: center;
+  color: #333;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: '宋体';
+  margin: 0 auto;
+  display: block;
+}
+.ProductsBases .search_tit-box span em {
+  color: #d10000;
+}
 .ProductsBases .bases_body {
   width: 1200px;
   margin: 30px auto 0;
