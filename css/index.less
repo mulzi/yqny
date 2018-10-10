@@ -624,6 +624,7 @@ footer {
 	.foot {
 		@w1200();
 		margin: 50px auto 20px;
+		position: relative;
 		.foot_logo {
 			width: 400px;
 			float: left;
@@ -1261,26 +1262,247 @@ footer {
 				color: @333;
 			}
 		}
-		.right{
+		.right {
 			width: 20%;
 			margin-left: 5%;
 			float: left;
-			span{
+			span {
 				width: 80%;
 				height: 180px;
 				display: block;
-				img{
+				img {
 					@img();
 				}
 			}
 		}
 	}
 }
-.contact_map{
+.contact_map {
 	@w1200();
-	.map_body{
+	.map_body {
 		@w1200();
 		height: 480px;
 	}
 }
 // 联系我们   结束
+
+// 论坛  开始
+.BBS_list {
+	@w1200();
+	.BBS_body {
+		@w1200();
+		.BBS_body_b {
+			@w1200();
+			margin-top: 0;
+			ul {
+				width: 90%;
+				margin: 0 auto;
+				li {
+					width: 90%;
+					margin: 40px auto;
+					border-bottom: dashed 1px #256600;
+					overflow: hidden;
+					&:hover {
+						box-shadow: 0px 3px 6px rgb(201, 201, 201);
+						border-bottom: dashed 1px transparent;
+					}
+					&:nth-child(2n + 1) .tit a {
+						color: rgb(196, 6, 101);
+					}
+					&:nth-child(3n + 1) .tit a {
+						color: rgb(158, 0, 0);
+					}
+					&:nth-child(4n + 1) .tit a {
+						color: rgb(238, 145, 6);
+					}
+					&:nth-child(5n + 1) .tit a {
+						color: rgb(23, 102, 247);
+					}
+					.look_number {
+						float: left;
+						width: 12%;
+						p {
+							width: 90%;
+							margin: 0 auto;
+							line-height: 30px;
+							text-align: center;
+							span {
+								display: inline-block;
+								vertical-align: middle;
+								text-align: center;
+								&:nth-child(1) {
+									width: 22px;
+									height: 22px;
+									img {
+										@img();
+									}
+								}
+								&:nth-child(2) {
+									color: #333;
+									font-size: 12px;
+								}
+							}
+						}
+					}
+					.tit {
+						width: 64%;
+						margin-left: 2%;
+						float: left;
+						margin-bottom: 30px;
+						a {
+							color: @color-b;
+							font-size: 22px;
+							@tov();
+							height: 30px;
+							line-height: 30px;
+							font-weight: bold;
+							display: block;
+							width: 100%;
+							cursor: pointer;
+						}
+						span {
+							display: block;
+							width: 100%;
+							@tov();
+							height: 30px;
+							line-height: 30px;
+							color: #999;
+							font-size: 16px;
+						}
+					}
+					.time {
+						width: 20%;
+						margin-left: 2%;
+						float: left;
+						span {
+							width: 100%;
+							margin: 10px auto;
+							display: block;
+							color: @333;
+							text-align: center;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.BBS_body_cont{
+	width: 86%;
+	margin: 0 auto;
+	ul{
+		width: 100%;
+		margin: 0 auto;
+		li{
+			border:  1px solid rgb(214, 214, 214);
+			overflow: hidden;
+			background-color: #e5ecf2;
+			.left{
+				width: 220px;
+				float: left;
+				height: 100%;
+				max-height: 730px;
+				span{
+					display: block;
+					&:nth-child(1){
+						height: 42px;
+						line-height: 42px;
+						text-indent: 2.5em;
+						width: 100%;
+						border-bottom: 1px dashed #999;
+						 color: @333;
+						 font-weight: bold;
+						 font-size: 14px;
+					}
+					&:nth-child(2){
+						width: 160px;
+						height: 160px;
+						margin-top: 30px;
+						margin-left: 30px;
+						img{
+							@img();
+						}
+					}
+				}
+			}
+			.right{
+				width: 810px;
+				float: left;
+				border-left: 1px solid rgb(214, 214, 214);
+				background-color: #fff;
+				box-sizing: border-box;
+				>p{
+					width: 90%;
+					margin: 0 auto;
+					line-height: 40px;
+					height: 40px;
+					border-bottom: 1px dashed #999;
+					span{
+						display: inline-block;
+						vertical-align: middle;
+						&:nth-child(1){
+							width: 20px;
+							height: 20px;
+							img{
+								@img();
+							}
+						}
+						&:nth-child(2){
+							color: #999;
+							font-size: 12px;
+						}
+					}
+				}
+				.content_bbs{
+					width: 88%;
+					min-height: 300px;
+					margin: 40px auto;
+				}
+			}
+		}
+	}
+}
+// 论坛   结束
+
+//  返回顶部 
+@media screen and(min-width: 1300px)and(max-width:1367px){
+	.sc_top{
+		position: fixed;
+		bottom: 10px;
+		right: 30px;
+		height: 40px;
+		width: 40px;
+		background-color: rgba(238, 238, 238,.2);
+		cursor: pointer;
+		&:hover{
+			background-color: rgb(252, 252, 252);
+		}
+		img{
+			@img();
+		}
+	}
+	
+} 
+@media screen and(min-width: 1400px){
+	.sc_top{
+		position: fixed;
+		bottom: 10px;
+		right: 230px;
+		height: 40px;
+		width: 40px;
+		cursor: pointer;
+		background-color: rgba(238, 238, 238,.2);
+		&:hover{
+			background-color: rgb(252, 252, 252);
+		}
+		img{
+			@img();
+		}
+	}
+}
+
+
+
+//   返回顶部

@@ -15,22 +15,22 @@ function imgRun(boxId, lefte, nextr) {
 		}, 600);
 		flag = true;
 	};
-	if(flag) {
-		
-		$(lefte).stop().click(function() {
+	if (flag) {
+
+		$(lefte).stop().click(function () {
 			flag = false;
 			index++;
-			if(index >= len - 2) {
+			if (index >= len - 2) {
 				index = len - 3
 			} else {
 				runlun();
 			}
 			console.log(index)
 		});
-		$(nextr).stop().click(function() {
+		$(nextr).stop().click(function () {
 			flag = false;
 			index--;
-			if(index <= 0) {
+			if (index <= 0) {
 				index = 1
 			} else {
 				runlun();
@@ -44,3 +44,22 @@ function imgRun(boxId, lefte, nextr) {
 
 }
 imgRun(".show_img", ".preleft", ".nextright");
+
+$(function () {
+	$(window).scroll(function () {
+		$('.sc_top').remove();
+		if ($(window).scrollTop() >= 900) {
+			$('<div class="sc_top">\
+			 <img src="./img/ftop.png" title="返回顶部">\
+			   </div>').appendTo('.foot');
+			$('.sc_top').click(function () {
+				$('html,body').animate({
+					scrollTop: 0,
+				}, 800)
+			})
+		} else {
+			$('.sc_top').fadeOut();
+		}
+	});
+
+})
